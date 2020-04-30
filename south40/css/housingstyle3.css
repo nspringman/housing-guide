@@ -1,0 +1,243 @@
+/*!
+ * Start Bootstrap - Full Slider HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+ @font-face{
+    font-family: Whitney;
+    src: url('fonts/whitney-book-webfont.eot');
+}
+
+html,body {
+    max-width: 100%;
+    font-family: 'Whitney', sans-serif;
+    font-size: 15px;
+    overflow-x: hidden;
+}
+
+/* carousel ratio laptop height:width = 0.6578947368 */
+/* carousel ratio mobile height:width = 0.5555555555 */
+
+
+.item, .active {
+    height: 500px;
+    
+}
+
+/*iphone 6+*/
+@media (max-width : 736px){
+    .item, .active {
+        width: 100%;
+        height: 35vh;
+    }
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.navbar{
+    margin-bottom: 0px;
+    min-height: 50px;
+    border-radius: 0px;
+}
+
+.navbar-brand{
+    padding: 10px;
+}
+
+.navbar-default{
+    background-color: rgba(255,255,255,0.7);
+    border-bottom: 2px solid #F33541;
+}
+
+.navbar-inverse{
+    background-color: #d31c13;
+}
+
+.navbar-default .navbar-nav>li>a{
+    color: #F33541;
+}
+
+.navbar-default .navbar-nav>li>a:hover{
+    text-decoration: underline;
+    color: #F33541;
+}
+
+.dropdown-menu {
+    padding: 15px;
+    border-radius: 1px;
+}
+
+.large-dropdown{
+    width: 600px;
+    color: black;
+}
+
+.large-dropdown a{
+    color: #F33541;
+    font-weight: 500;
+}
+
+.li-header>a{
+    font-weight: 600;
+}
+
+.li-header{
+    box-sizing: border-box;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 8px;
+}
+
+.large-dropdown a:hover{
+    color: #F33541;
+}
+
+.large-dropdown .dropdown-inactive{
+    color: grey;
+    font-weight: 400;
+}
+
+.large-dropdown {
+    max-width: 100%;
+}
+
+.nav-margin{
+    margin-top: 50px;
+}
+
+.text-field {
+    border-radius: 1px;
+}
+
+.text-field:focus {
+    border-color: rgba(249, 52, 71, 0.6);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(249,49,68,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(249,49,68,.6);
+}
+
+.hr-red{
+    border-top: 1px solid #F33541;
+}
+
+.hr-nav{
+    margin: 7px 0;
+}
+
+.crest-size{
+    height: 40px;
+    margin-right: 15px;
+}
+
+.icon-size{
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.icon-sm-size{
+    width: 30px;
+}
+
+.icon-invisible i{
+    visibility: hidden;
+}
+
+.icon-invisible{
+    text-decoration: line-through;
+    color: grey;
+}
+
+.bar{
+    height: 50px;
+    background-color: #F6979F;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.caption-bar{
+    color: white;
+    height: 20px;
+    background-color: #d31c13;
+    padding-right: 7px;
+    padding-top: 3px;
+    font-size: 12px;
+}
+
+.img-size{
+    height: 35px;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 10px 0 0 0;
+    background-color: #F1F1F1;
+    font-size: 13px;
+    color: grey;
+}
+
+.title{
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+h1{
+    font-weight: 200;
+    margin: 35px 0;
+}
+
+.narrow{
+    margin: auto;
+    width: 90%;
+    margin-bottom: 50px;
+}
+
+.tb-20{
+    margin-top: 25px;
+}
+
+.ul-red{
+    border-bottom: 2px solid #F33541;
+}
+
+.back-link{
+    color: #F33541;
+    font-weight: 500;
+}
+.back-link:hover, footer a{
+    color: #F33541;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: underline;
+}
+footer a:hover{
+    color: #F33541;
+}
+
+.maps-container{
+    display: block;
+    margin: 0 auto;
+}
+iframe{
+    border: none;
+    height: 400px;
+    width:100%;
+}
+
+.profile-photo .profile-photo-light{
+    display: none;
+}

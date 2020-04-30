@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Eliot A House</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css?v=2" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/housingstyle3.css?v=6" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <!-- <script src="js/handlebars-v4.0.5.js"></script> -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-3210731-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://www.studlife.com/housing"><img class="img-size" src="images/studlife-housing-red.png" alt="studlife logo"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" id="dorms" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse dorms<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="form-group">
+                                    <input type="text" id="search-input" class="form-control text-field" placeholder="Search dorms" onkeyup="searchDropdown()">
+                                </div>
+                            </div>
+                            <li>
+                                <div class="large-dropdown col-md-12 col-xs-12" id="dropdown-options">
+                                    <ul class="list-unstyled col-md-4 col-xs-6">
+                                        <li class="li-header"><a href="http://studlife.com/housing?1">South 40: Freshmen</a></li>
+                                        <li><a href="beaumont.html">Beaumont Hall</a></li>
+                                        <li><a href="danforth.html">Danforth House</a></li>
+                                        <li><a href="dardick.html">Dardick House</a></li>
+                                        <li><a href="dauten.html">Dauten Hall</a></li>
+                                        <li><a href="eliota.html">Eliot A Hall</a></li>
+                                        <li><a href="hurd.html">Hurd Hall</a></li>
+                                        <li><a href="koenig.html">Koenig House</a></li>
+                                        <li><a href="lee.html">Lee Hall</a></li>
+                                        <li><a href="lien.html">Lien House</a></li>
+                                        <li><a href="park.html">Park House</a></li>
+                                        <li><a href="umrath.html">Umrath House</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled col-md-4 col-xs-6">
+                                        <li class="li-header"><a href="http://studlife.com/housing?2">South 40: Sophomores</a></li>
+                                        <li><a href="eliotb.html">Eliot B Hall</a></li>
+                                        <li><a href="gregg.html">Gregg House</a></li>
+                                        <li><a href="hitzeman.html">Hitzeman Hall</a></li>
+                                        <li><a href="liggett.html">Liggett House</a></li>
+                                        <li><a href="mudd.html">Mudd House</a></li>
+                                        <li><a href="myers.html">Myers Hall</a></li>
+                                        <li><a href="nemerov.html">Nemerov House</a></li>
+                                        <li><a href="rutledge.html">Rutledge Hall</a></li>
+                                        <li><a href="shanedling.html">Shanedling Hall</a></li>
+                                        <li><a href="shepley.html">Shepley House</a></li>
+                                        <li><a href="sofoho.html">South 40 House</a></li>
+                                        <li><a href="wheeler.html">Wheeler House</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled col-md-4 col-xs-6">
+                                        <li class="li-header"><a href="http://studlife.com/housing?3">North Side</a></li>
+                                        <li><a href="../northside/greenway.html">Greenway Apartments</a></li>
+                                        <li><a href="../northside/lopata.html">Village &amp; Lopata House</a></li>
+                                        <li><a href="../northside/millbrook.html">Millbrook Apartments</a></li>
+                                        <li><a href="../northside/rosedale.html">Rosedale Apartments</a></li>
+                                        <li><a href="../northside/lofts.html">The Lofts</a></li>
+                                        <li><a href="../northside/udrive.html">University Drive</a></li>
+                                        <li><a href="../northside/uterrace.html">University Terrace</a></li>
+                                        <li><a href="../northside/veast.html">Village East</a></li>
+                                        <li><a href="../northside/6640wa.html">6640-44 Wash. Ave</a></li>
+                                        <li><a href="../northside/6665wa.html">6665 Wash. Ave</a></li>
+                                        <li><a href="../northside/6678wa.html">6678 Wash. Ave &amp; 520 Kingsland</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="row ">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div id="myCarousel" class="carousel slide">
+
+                <!-- Wrapper for Slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="fill" style="background-image:url('images/eliota/1Front.JPG?v=2');"></div>
+                        </div>
+                        <div class="item">
+                            <div class="fill" style="background-image:url('images/eliota/2Back.JPG?v=2');"></div>
+                        </div>
+                        <div class="item">
+                            <div class="fill" style="background-image:url('images/eliota/6Single.JPG?v=2');"></div>
+                        </div>
+                        <div class="item">
+                            <div class="fill" style="background-image:url('images/eliota/8Suite.JPG?v=2');"></div>
+                        </div>
+                        <div class="item">
+                            <div class="fill" style="background-image:url('images/eliota/9Bath.JPG?v=2');"></div>
+                        </div>
+                        <div class="item">
+                            <div class="fill" style="background-image:url('images/eliota/10Bath.JPG?v=2');"></div>
+                        </div>
+                        <div class="item">
+                            <div class="fill" style="background-image:url('images/eliota/11Hall.JPG?v=2');"></div>
+                        </div>
+                        <div class="item">
+                            <div class="fill" style="background-image:url('images/eliota/12StudyRoom.JPG?v=2');"></div>
+                        </div>
+                        <div class="item">
+                            <div class="fill" style="background-image:url('images/eliota/13Lounge.JPG?v=2');"></div>
+                        </div>
+                        <div class="item">
+                            <div class="fill" style="background-image:url('images/eliota/16Library.JPG?v=2');"></div>
+                        </div>
+                        <div class="item">
+                            <div class="fill" style="background-image:url('images/eliota/17Kitchen.JPG?v=2');"></div>
+                        </div>
+                        <div class="item">
+                            <div class="fill" style="background-image:url('images/eliota/18Laundry.JPG?v=2');"></div>
+                        </div>
+                        <div class="item">
+                            <div class="fill" style="background-image:url('images/eliota/19MultiPurpose.JPG?v=2');"></div>
+                        </div>
+                        <div class="item">
+                            <div class="fill" style="background-image:url('images/eliota/20Seminar.JPG?v=2');"></div>
+                        </div>
+                    </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="icon-prev"></span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="icon-next"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="col-md-8 col-md-offset-2 col-xs-12">
+
+                <div class="row text-center">
+                    <h1>Eliot A House</h1> <!-- <img class="crest-size" src="images/dorm-crests/lee-beaumont-crest.jpg" alt="crest"> -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p><span class="icon-size"><i class="fa fa-home" aria-hidden="true"></i></span>Modern housing</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p><span class="glyphicon glyphicon-bed icon-size" aria-hidden="true"></span> Singles, Doubles</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p><span class="icon-size"><i class="fa fa-users" aria-hidden="true"></i></span>Four person suites</p>
+                        </div>                    
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-12 col-xs-12">
+                        <p>One half of the Thomas H. Eliot Residential College, Thomas H. Eliot House, or Eliot A, was constructed in 2002. The modern dorm was known as “University House” until 2005, when the name was transferred to the relatively new dorm from an older high-rise that had held the name since 1964. Both the Residential College and dorm are named for Thomas H. Eliot, Wash. U.’s 12th chancellor, who held the position from 1962 to 1971, and was a distant relative of Wash. U. founder William Greenleaf Eliot. The Eliot Res College is one of the newer residential colleges—it wasn’t founded until fall 2010, when Thomas Eliot B House, or “Eliot B,” a sophomore dorm, opened and the two joined together to form the residential college. Elana Lederman, a resident from 2009-2011, designed the ResCollege’s crest. Traditions include  Gator Welcome Week and Eliot Lawn Games.</p>
+                    </div>
+                </div>
+
+                <hr class="hr-red">
+
+                <div class="row">
+                    <div class="col md-12 col-xs-12 text-center">
+                        <h4><u>Facilities</u></h4>
+                    </div>
+                    <div class="col-md-offset-1 col-md-5 col-xs-offset-1  col-xs-12">
+                        <p>TV Lounge</p>
+                        <p>Close to parking garage</p>
+                        <p>Close to BD</p>
+                    </div>
+                    <div class="col-md-offset-1 col-md-5 col-xs-offset-1 col-xs-10">
+                        <p>Computer and printer lab</p>
+                        <p>Elevator</p>
+                        <p class="icon-invisible">Close to SHS</p>  
+                    </div>
+                </div>
+
+                <hr class="hr-red">
+
+                <div class="row text-center">
+                    <div class="col md-12 col-xs-12">
+                        <h4><u>Prices</u></h4>
+                    </div>
+                    <div class="col-md-4 col-md-offset-2 col-xs-4">
+                        <p><strong>Single</strong></p>
+                        <p>$11,938</p>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <p><strong>Double</strong></p>
+                        <p>$10,670</p>
+                    </div>
+                </div>
+
+                <hr class="hr-red">
+
+                <div class="row text-center">
+                    <div class="col md-12 col-xs-12">
+                        <h4><u>Walk Times</u></h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-xs-4">
+                            <p><strong>Brookings Quadrangle</strong></p>
+                        </div>
+                        <div class="col-md-4 col-xs-4">
+                            <p><strong>Danforth University Center</strong></p>
+                        </div>
+                        <div class="col-md-4 col-xs-4">
+                            <p><strong>Delmar Loop</strong></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-xs-4">
+                            <p>16 min</p>
+                        </div>
+                        <div class="col-md-4 col-xs-4">
+                            <p>7 min</p>
+                        </div>
+                        <div class="col-md-4 col-xs-4">
+                            <p>22 min</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="hr-red">
+
+                <div class="row text-center col-md-12 maps-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1558.1060641919512!2d-90.31430304197406!3d38.644002494902615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8cab0ce31ef79%3A0xce869a53a771654d!2sEliot+House%2C+Clayton%2C+MO+63105%2C+USA!5e0!3m2!1sen!2suk!4v1467219940476" ></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <p>Photos by AB Brooks <span class="hidden-md hidden-lg"><br></span><span class="hidden-xs hidden-sm">|</span> Copyright © Student Life 2016</p>
+            </div>
+            <div class="col-md-1 col-xs-6 col-md-offset-3 text-center">
+                <a href="http://www.studlife.com/housing">Home</a>
+            </div>
+            <div class="col-md-1 col-xs-6 text-center">
+                <a class="back-link">Browse dorms</a>
+            </div>
+            <p class="hidden-md hidden-lg">&nbsp;</p>
+        </div>
+    </footer>
+
+    <script src="js/jquery.js"></script>
+
+    <script src="js/bootstrap.min.js"></script><script src="js/main.js"></script>
+
+</body>
+</html>

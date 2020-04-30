@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Umrath Hall</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css?v=2" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/housingstyle3.css?v=6" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <!-- <script src="js/handlebars-v4.0.5.js"></script> -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-3210731-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://www.studlife.com/housing"><img class="img-size" src="images/studlife-housing-red.png" alt="studlife logo"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" id="dorms" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse dorms<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="form-group">
+                                    <input type="text" id="search-input" class="form-control text-field" placeholder="Search dorms" onkeyup="searchDropdown()">
+                                </div>
+                            </div>
+                            <li>
+                                <div class="large-dropdown col-md-12 col-xs-12" id="dropdown-options">
+                                    <ul class="list-unstyled col-md-4 col-xs-6">
+                                        <li class="li-header"><a href="http://studlife.com/housing?1">South 40: Freshmen</a></li>
+                                        <li><a href="beaumont.html">Beaumont Hall</a></li>
+                                        <li><a href="danforth.html">Danforth House</a></li>
+                                        <li><a href="dardick.html">Dardick House</a></li>
+                                        <li><a href="dauten.html">Dauten Hall</a></li>
+                                        <li><a href="eliota.html">Eliot A Hall</a></li>
+                                        <li><a href="hurd.html">Hurd Hall</a></li>
+                                        <li><a href="koenig.html">Koenig House</a></li>
+                                        <li><a href="lee.html">Lee Hall</a></li>
+                                        <li><a href="lien.html">Lien House</a></li>
+                                        <li><a href="park.html">Park House</a></li>
+                                        <li><a href="umrath.html">Umrath House</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled col-md-4 col-xs-6">
+                                        <li class="li-header"><a href="http://studlife.com/housing?2">South 40: Sophomores</a></li>
+                                        <li><a href="eliotb.html">Eliot B Hall</a></li>
+                                        <li><a href="gregg.html">Gregg House</a></li>
+                                        <li><a href="hitzeman.html">Hitzeman Hall</a></li>
+                                        <li><a href="liggett.html">Liggett House</a></li>
+                                        <li><a href="mudd.html">Mudd House</a></li>
+                                        <li><a href="myers.html">Myers Hall</a></li>
+                                        <li><a href="nemerov.html">Nemerov House</a></li>
+                                        <li><a href="rutledge.html">Rutledge Hall</a></li>
+                                        <li><a href="shanedling.html">Shanedling Hall</a></li>
+                                        <li><a href="shepley.html">Shepley House</a></li>
+                                        <li><a href="sofoho.html">South 40 House</a></li>
+                                        <li><a href="wheeler.html">Wheeler House</a></li>
+                                    </ul>
+                                    <ul class="list-unstyled col-md-4 col-xs-6">
+                                        <li class="li-header"><a href="http://studlife.com/housing?3">North Side</a></li>
+                                        <li><a href="../northside/greenway.html">Greenway Apartments</a></li>
+                                        <li><a href="../northside/lopata.html">Village &amp; Lopata House</a></li>
+                                        <li><a href="../northside/millbrook.html">Millbrook Apartments</a></li>
+                                        <li><a href="../northside/rosedale.html">Rosedale Apartments</a></li>
+                                        <li><a href="../northside/lofts.html">The Lofts</a></li>
+                                        <li><a href="../northside/udrive.html">University Drive</a></li>
+                                        <li><a href="../northside/uterrace.html">University Terrace</a></li>
+                                        <li><a href="../northside/veast.html">Village East</a></li>
+                                        <li><a href="../northside/6640wa.html">6640-44 Wash. Ave</a></li>
+                                        <li><a href="../northside/6665wa.html">6665 Wash. Ave</a></li>
+                                        <li><a href="../northside/6678wa.html">6678 Wash. Ave &amp; 520 Kingsland</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="row ">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div id="myCarousel" class="carousel slide">
+
+                <!-- Wrapper for Slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="fill" style="background-image:url('images/umrath/jvphoto-2.jpg?v=2');"></div>
+                        </div>
+                        <div class="item">
+                            <div class="fill" style="background-image:url('images/umrath/jvphoto-3.jpg?v=2');"></div>
+                        </div>
+                        <div class="item">
+                            <div class="fill" style="background-image:url('images/umrath/jvphoto-4.jpg?v=2');"></div>
+                        </div>
+                        <div class="item">
+                            <div class="fill" style="background-image:url('images/umrath/jvphoto-5.jpg?v=2');"></div>
+                        </div>
+                        <div class="item">
+                            <div class="fill" style="background-image:url('images/umrath/jvphoto-6.jpg?v=2');"></div>
+                        </div>
+                        <div class="item">
+                            <div class="fill" style="background-image:url('images/umrath/jvphoto-7.jpg?v=2');"></div>
+                        </div>
+                        <div class="item">
+                            <div class="fill" style="background-image:url('images/umrath/jvphoto-9.jpg?v=2');"></div>
+                        </div>
+                    </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="icon-prev"></span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="icon-next"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="col-md-8 col-md-offset-2 col-xs-12">
+
+                <div class="row text-center">
+                    <h1><img class="crest-size" src="images/dorm-crests/RUSoFoCrest.jpg" alt="crest">Umrath Hall</h1>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p><span class="icon-size"><i class="fa fa-home" aria-hidden="true"></i></span>Modern housing</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p><span class="glyphicon glyphicon-bed icon-size" aria-hidden="true"></span> Doubles, Triples</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p><span class="icon-size"><i class="fa fa-users" aria-hidden="true"></i></span>Four person suites</p>
+                        </div>                    
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-12 col-xs-12">
+                        <p>Renovations to the old Rubelmann Hall will, instead of creating an independent dorm, be added to Umrath House, making the modern dorm the most recently expanded dorm on the South 40. A part of the Umrath and South 40 Residential College (USoFo), Umrath House itself is fairly new, as it opened in 2009. The dorm is named after Helen Umrath, the wife of Karl D. Umrath, who Umrath Hall is named after. The dorm’s first floor houses Bear Necessities, a not-for-profit gift store operated by the Women’s Society of Washington University. USoFo traditions include Whale Waffles and Rum-B-Que.</p>
+                    </div>
+                </div>
+
+                <hr class="hr-red">
+
+                <div class="row">
+                    <div class="col md-12 col-xs-12 text-center">
+                        <h4><u>Facilities</u></h4>
+                    </div>
+                    <div class="col-md-offset-1 col-md-5 col-xs-offset-1  col-xs-12">
+                        <p>Close to BD</p>
+                        <p>Close to Bear Necessities</p>
+                        <p>Close to SHS</p>
+                        <p>Close to Clocktower</p>
+                    </div>
+                    <div class="col-md-offset-1 col-md-5 col-xs-offset-1 col-xs-10">
+                        <p>Computer Lab</p>
+                        <p>Kitchen</p>
+                        <p>Elevator</p>
+                        <p class="icon-invisible">Computer and printer lab</p>
+                    </div>
+                </div>
+
+                <hr class="hr-red">
+
+                <div class="row text-center">
+                    <div class="col md-12 col-xs-12">
+                        <h4><u>Prices</u></h4>
+                    </div>
+                    <div class="col-md-4 col-md-offset-2 col-xs-4">
+                        <p><strong>Double</strong></p>
+                        <p>$10,670</p>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <p><strong>Triple</strong></p>
+                        <p>$10,670</p>
+                    </div>
+                </div>
+
+                <hr class="hr-red">
+
+                <div class="row text-center">
+                    <div class="col md-12 col-xs-12">
+                        <h4><u>Walk Times</u></h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-xs-4">
+                            <p><strong>Brookings Quadrangle</strong></p>
+                        </div>
+                        <div class="col-md-4 col-xs-4">
+                            <p><strong>Danforth University Center</strong></p>
+                        </div>
+                        <div class="col-md-4 col-xs-4">
+                            <p><strong>Delmar Loop</strong></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-xs-4">
+                            <p>14 min</p>
+                        </div>
+                        <div class="col-md-4 col-xs-4">
+                            <p>6 min</p>
+                        </div>
+                        <div class="col-md-4 col-xs-4">
+                            <p>21 min</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="hr-red">
+
+                <div class="row text-center col-md-12 maps-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1558.0825141087578!2d-90.314635491904!3d38.645085594902596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8cab12c91417b%3A0x9258e0e31652d28f!2sUmrath+House%2C+Clayton%2C+MO+63105%2C+USA!5e0!3m2!1sen!2suk!4v1467230574075" ></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <p>Photos by Joachim Vaturi <span class="hidden-md hidden-lg"><br></span><span class="hidden-xs hidden-sm">|</span> Copyright © Student Life 2016</p>
+            </div>
+            <div class="col-md-1 col-xs-6 col-md-offset-3 text-center">
+                <a href="http://www.studlife.com/housing">Home</a>
+            </div>
+            <div class="col-md-1 col-xs-6 text-center">
+                <a class="back-link">Browse dorms</a>
+            </div>
+            <p class="hidden-md hidden-lg">&nbsp;</p>
+        </div>
+    </footer>
+
+    <script src="js/jquery.js"></script>
+
+    <script src="js/bootstrap.min.js"></script><script src="js/main.js"></script>
+
+</body>
+</html>
