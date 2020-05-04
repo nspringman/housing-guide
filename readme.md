@@ -1,4 +1,4 @@
-#Housing Guide
+# Housing Guide
 
 __page-housing.php__ lives in the current theme directory. This should be edited in an external text editor, not the WordPress panel.
 
