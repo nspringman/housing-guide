@@ -3,13 +3,16 @@
 		.housing-map{
 			height: 600px;
 		}
+		.leaflet-popup-content{
+			font-size: 1.5em;
+		}
 	</style>
 	<div class="housing-map" id="sophomore-housing-map"></div>
 	<script type="text/javascript">
 		var mymap = L.map('sophomore-housing-map').setView([38.644432, -90.313888], 16.5);
-		L.tileLayer('https://api.mapbox.com/styles/v1/studentlifenewspaper/{id}/tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
+		L.tileLayer('https://api.mapbox.com/styles/v1/studentlifenewspaper/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
 			attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-			maxZoom: 18,
+			maxZoom: 20,
 			id: 'ck9nkgte3058o1ip80xvsnybg',
 			tileSize: 512,
 			zoomOffset: -1,
@@ -19,16 +22,16 @@
 		let markers = [
 			["Eliot B",			"../south40/eliotb", 			38.644450, -90.312938],
 			["Gregg",				"../south40/gregg",  			38.646153, -90.312463],
-			["Hitzeman",		"../south40/hitzeman", 		38.643487, -90.312461 ],
+			["Hitzeman",		"../south40/hitzeman", 		38.643437, -90.312552],
 			["Liggett",			"../south40/liggett", 		38.644597, -90.312051],
-			["Mudd", 				"../south40/mudd", 				38.643684, -90.314681 ],
-			["Myers", 			"../south40/myers", 			38.643536, -90.313327 ],
-			["Nemerov", 		"../south40/nemerov", 		38.645702, -90.314309 ],
-			["Rutledge", 		"../south40/rutledge", 		38.645092, -90.315189 ],
-			["Shanedling", 	"../south40/shanedling", 	38.645032, -90.315785 ],
-			["Shepley", 		"../south40/shepley", 		38.644319, -90.315897 ],
-			["SoFoHo", 			"../south40/sofoho", 			38.644878, -90.313103 ],
-			["Wheeler", 		"../south40/wheeler", 		38.643793, -90.315788 ]
+			["Mudd", 				"../south40/mudd", 				38.643684, -90.314681],
+			["Myers", 			"../south40/myers", 			38.643536, -90.313327],
+			["Nemerov", 		"../south40/nemerov", 		38.645702, -90.314309],
+			["Rutledge", 		"../south40/rutledge", 		38.645092, -90.315189],
+			["Shanedling", 	"../south40/shanedling", 	38.645032, -90.315785],
+			["Shepley", 		"../south40/shepley", 		38.644319, -90.315897],
+			["SoFoHo", 			"../south40/sofoho", 			38.644878, -90.313103],
+			["Wheeler", 		"../south40/wheeler", 		38.643793, -90.315788]
 		];
 
 		for(let i = 0; i < markers.length; ++i){
