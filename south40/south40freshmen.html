@@ -1,150 +1,147 @@
-<div class="site-container">
-	<div class="housing-map" id="freshman-housing-map"></div>
-	<script type="text/javascript">
-		var mymap = L.map('freshman-housing-map').setView([38.644432, -90.313888], 16.5);
-		L.tileLayer('https://api.mapbox.com/styles/v1/studentlifenewspaper/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-			attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-			maxZoom: 20,
-			id: 'ck9nkgte3058o1ip80xvsnybg',
-			tileSize: 512,
-			zoomOffset: -1,
-			accessToken: 'pk.eyJ1Ijoic3R1ZGVudGxpZmVuZXdzcGFwZXIiLCJhIjoiY2s5bmhrZTFzMDJjajNmbzd2eHpoc3BraCJ9.mfW3MvzjG6Rvch9CF1q-Sg'
-		}).addTo(mymap);
+<div class="housing-map" id="freshman-housing-map"></div>
+<script type="text/javascript">
+	var mymap = L.map('freshman-housing-map').setView([38.644432, -90.313888], 16.5);
+	L.tileLayer('https://api.mapbox.com/styles/v1/studentlifenewspaper/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		maxZoom: 20,
+		id: 'ck9nkgte3058o1ip80xvsnybg',
+		tileSize: 512,
+		zoomOffset: -1,
+		accessToken: 'pk.eyJ1Ijoic3R1ZGVudGxpZmVuZXdzcGFwZXIiLCJhIjoiY2s5bmhrZTFzMDJjajNmbzd2eHpoc3BraCJ9.mfW3MvzjG6Rvch9CF1q-Sg'
+	}).addTo(mymap);
 
-		let markers = [
-			["Beaumont",			"../south40/beaumont", 			38.644908, -90.314565],
-			["Danforth", 			"../south40/danforth",			38.644684, -90.315402],
-			["Dardick", 			"../south40/dardick",				38.645807, -90.315378],
-			["Dauten", 				"../south40/dauten",				38.645293, -90.315491],
-			["Eliot A", 			"../south40/eliota",				38.644015, -90.313211],
-			["Hurd", 					"../south40/hurd",					38.643357, -90.312937],
-			["Koenig", 				"../south40/koenig",				38.644971, -90.311799],
-			["Lee", 					"../south40/lee",						38.645365, -90.314727],
-			["Lien", 					"../south40/lien",					38.645593, -90.313115],
-			["Park", 					"../south40/park",					38.643639, -90.314966],
-			["Umrath", 				"../south40/umrath",				38.644975, -90.313673]
-		];
+	let markers = [
+		["Beaumont",			"../south40/beaumont", 			38.644908, -90.314565],
+		["Danforth", 			"../south40/danforth",			38.644684, -90.315402],
+		["Dardick", 			"../south40/dardick",				38.645807, -90.315378],
+		["Dauten", 				"../south40/dauten",				38.645293, -90.315491],
+		["Eliot A", 			"../south40/eliota",				38.644015, -90.313211],
+		["Hurd", 					"../south40/hurd",					38.643357, -90.312937],
+		["Koenig", 				"../south40/koenig",				38.644971, -90.311799],
+		["Lee", 					"../south40/lee",						38.645365, -90.314727],
+		["Lien", 					"../south40/lien",					38.645593, -90.313115],
+		["Park", 					"../south40/park",					38.643639, -90.314966],
+		["Umrath", 				"../south40/umrath",				38.644975, -90.313673]
+	];
 
-		for(let i = 0; i < markers.length; ++i){
-			var link = document.createElement('a');
-			link.setAttribute("href", markers[i][1]);
-			link.innerText = markers[i][0];
-			marker = new L.marker([markers[i][2], markers[i][3]])
-				.bindPopup(link)
-				.addTo(mymap);
-		}
-	</script>
-	<ul class="staff-list">
-		<li class="person left">
-			<div class="person-container">
-				<a href="../south40/beaumont">
-					<img class="staff-picture" src="../south40/images/thumbs/beaumont.png"/>
-					<div class="info-container"><br>
-						<h3 class="name">Beaumont</h3>
-					</div>
-				</a>
-			</div>
-		</li>
-		<li class="person ">
-			<div class="person-container">
-				<a href="../south40/danforth">
-					<img class="staff-picture" src="../south40/images/thumbs/danforth.png"/>
-					<div class="info-container"><br>
-						<h3 class="name">Danforth</h3>
-					</div>
-				</a>
-			</div>
-		</li>
-		<li class="person left">
-			<div class="person-container">
-				<a href="../south40/dardick">
-					<img class="staff-picture" src="../south40/images/thumbs/dardick.png"/>
-					<div class="info-container"><br>
-						<h3 class="name">Dardick</h3>
-					</div>
-				</a>
-			</div>
-		</li>
-		<li class="person">
-			<div class="person-container">
-				<a href="../south40/dauten">
-					<img class="staff-picture" src="../south40/images/thumbs/dauten.png"/>
-					<div class="info-container"><br>
-						<h3 class="name">Dauten</h3>
-					</div>
-				</a>
-			</div>
-		</li>
-		<li class="person left">
-			<div class="person-container">
-				<a href="../south40/eliota">
-					<img class="staff-picture" src="../south40/images/thumbs/eliota.png"/>
-					<div class="info-container"><br>
-						<h3 class="name">Eliot A</h3>
-					</div>
-				</a>
-			</div>
-		</li>
-		<li class="person">
-			<div class="person-container">
-				<a href="../south40/hurd">
-					<img class="staff-picture" src="../south40/images/thumbs/hurd.png"/>
-					<div class="info-container"><br>
-						<h3 class="name">Hurd</h3>
-					</div>
-				</a>
-			</div>
-		</li>
-		<li class="person left">
-			<div class="person-container">
-				<a href="../south40/koenig">
-					<img class="staff-picture" src="../south40/images/thumbs/koenig.png"/>
-					<div class="info-container"><br>
-						<h3 class="name">Koenig</h3>
-					</div>
-				</a>
-			</div>
-		</li>
-		<li class="person">
-			<div class="person-container">
-				<a href="../south40/lee">
-					<img class="staff-picture" src="../south40/images/thumbs/lee.png"/>
-					<div class="info-container"><br>
-						<h3 class="name">Lee</h3>
-					</div>
-				</a>
-			</div>
-		</li>
-		<li class="person left">
-			<div class="person-container">
-				<a href="../south40/lien">
-					<img class="staff-picture" src="../south40/images/thumbs/lien.png"/>
-					<div class="info-container"><br>
-						<h3 class="name">Lien</h3>
-					</div>
-				</a>
-			</div>
-		</li>
-		<li class="person">
-			<div class="person-container">
-				<a href="../south40/park">
-					<img class="staff-picture" src="../south40/images/thumbs/park.png"/>
-					<div class="info-container"><br>
-						<h3 class="name">Park</h3>
-					</div>
-				</a>
-			</div>
-		</li>
-		<li class="person left">
-			<div class="person-container">
-				<a href="../south40/umrath">
-					<img class="staff-picture" src="../south40/images/thumbs/umrath.png"/>
-					<div class="info-container"><br>
-						<h3 class="name">Umrath</h3>
-					</div>
-				</a>
-			</div>
-		</li>
-	</ul>
-
-</div>
+	for(let i = 0; i < markers.length; ++i){
+		var link = document.createElement('a');
+		link.setAttribute("href", markers[i][1]);
+		link.innerText = markers[i][0];
+		marker = new L.marker([markers[i][2], markers[i][3]])
+			.bindPopup(link)
+			.addTo(mymap);
+	}
+</script>
+<ul class="staff-list">
+	<li class="person left">
+		<div class="person-container">
+			<a href="../south40/beaumont">
+				<img class="staff-picture" src="../south40/images/thumbs/beaumont.png"/>
+				<div class="info-container"><br>
+					<h3 class="name">Beaumont</h3>
+				</div>
+			</a>
+		</div>
+	</li>
+	<li class="person ">
+		<div class="person-container">
+			<a href="../south40/danforth">
+				<img class="staff-picture" src="../south40/images/thumbs/danforth.png"/>
+				<div class="info-container"><br>
+					<h3 class="name">Danforth</h3>
+				</div>
+			</a>
+		</div>
+	</li>
+	<li class="person left">
+		<div class="person-container">
+			<a href="../south40/dardick">
+				<img class="staff-picture" src="../south40/images/thumbs/dardick.png"/>
+				<div class="info-container"><br>
+					<h3 class="name">Dardick</h3>
+				</div>
+			</a>
+		</div>
+	</li>
+	<li class="person">
+		<div class="person-container">
+			<a href="../south40/dauten">
+				<img class="staff-picture" src="../south40/images/thumbs/dauten.png"/>
+				<div class="info-container"><br>
+					<h3 class="name">Dauten</h3>
+				</div>
+			</a>
+		</div>
+	</li>
+	<li class="person left">
+		<div class="person-container">
+			<a href="../south40/eliota">
+				<img class="staff-picture" src="../south40/images/thumbs/eliota.png"/>
+				<div class="info-container"><br>
+					<h3 class="name">Eliot A</h3>
+				</div>
+			</a>
+		</div>
+	</li>
+	<li class="person">
+		<div class="person-container">
+			<a href="../south40/hurd">
+				<img class="staff-picture" src="../south40/images/thumbs/hurd.png"/>
+				<div class="info-container"><br>
+					<h3 class="name">Hurd</h3>
+				</div>
+			</a>
+		</div>
+	</li>
+	<li class="person left">
+		<div class="person-container">
+			<a href="../south40/koenig">
+				<img class="staff-picture" src="../south40/images/thumbs/koenig.png"/>
+				<div class="info-container"><br>
+					<h3 class="name">Koenig</h3>
+				</div>
+			</a>
+		</div>
+	</li>
+	<li class="person">
+		<div class="person-container">
+			<a href="../south40/lee">
+				<img class="staff-picture" src="../south40/images/thumbs/lee.png"/>
+				<div class="info-container"><br>
+					<h3 class="name">Lee</h3>
+				</div>
+			</a>
+		</div>
+	</li>
+	<li class="person left">
+		<div class="person-container">
+			<a href="../south40/lien">
+				<img class="staff-picture" src="../south40/images/thumbs/lien.png"/>
+				<div class="info-container"><br>
+					<h3 class="name">Lien</h3>
+				</div>
+			</a>
+		</div>
+	</li>
+	<li class="person">
+		<div class="person-container">
+			<a href="../south40/park">
+				<img class="staff-picture" src="../south40/images/thumbs/park.png"/>
+				<div class="info-container"><br>
+					<h3 class="name">Park</h3>
+				</div>
+			</a>
+		</div>
+	</li>
+	<li class="person left">
+		<div class="person-container">
+			<a href="../south40/umrath">
+				<img class="staff-picture" src="../south40/images/thumbs/umrath.png"/>
+				<div class="info-container"><br>
+					<h3 class="name">Umrath</h3>
+				</div>
+			</a>
+		</div>
+	</li>
+</ul>

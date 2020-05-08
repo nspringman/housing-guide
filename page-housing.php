@@ -8,6 +8,15 @@ Template Name: Housing Page
 
 //Breaking out of site-container
 ?>
+
+<a onclick="load(0)">
+	<!-- <div id="top" class="feature-image feature-staff"> -->
+		<!-- <div class="title-container" id="top">
+			<h1 class="tagline">Student Life Housing Guide</h1>
+		</div> -->
+	<!-- </div> -->
+</a>
+
 </div>
 
 <style type="text/css">
@@ -37,15 +46,35 @@ Template Name: Housing Page
 	}
 	.h-c {
 		max-width: 850px;
-		margin: 50px auto;
+		margin: 30px auto;
 		padding: 0 15px;
 	}
-
+	#housing-container{
+		padding: 0 60px;
+	}
+	.rights-reserved > h3, .static-house .static-nav a{
+		font-family: "Georgia", "Times", serif !important;
+	}
 	.housing-map{
 		height: 600px;
 	}
 	.leaflet-popup-content{
 		font-size: 1.5em;
+	}
+
+	@media(max-width: 500px){
+		#housing-container{
+			padding: 0 30px;
+		}
+		.h-c{
+			margin: 30px 0;
+			padding: 0;
+		}
+		.rights-reserved{
+			margin: 0;
+			padding: 0;
+			width: 100%;
+		}
 	}
 </style>
 
@@ -57,15 +86,8 @@ Template Name: Housing Page
   crossorigin=""></script>
 
 <div class="static-house">
-	<a onclick="load(0)">
-		<div id="top" class="feature-image feature-staff">
-			<div class="title-container">
-				<h1 class="tagline">Student Life Housing Guide</h1>
-			</div>
-		</div>
-	</a>
 
-	<div class="static-nav">
+	<div class="static-nav" id="housing-nav">
 		<div class="container">
 			<a onclick="load(1)" id="s40f">South 40 Freshmen</a>
 			<a onclick="load(2)" id="s40s">South 40 Sophomores</a>
@@ -88,7 +110,7 @@ Template Name: Housing Page
 <script>
 
 	$(document).ready(function () {
-		$('html, body').animate({scrollTop: $('#top').offset().top}, 'slow');
+		//$('html, body').animate({scrollTop: $('#housing-nav').offset().top}, 'slow');
 		var url = window.location.href;
 		var tab = url.charAt(url.length-1);
 		if(tab==1||tab==2||tab==3){
