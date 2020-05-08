@@ -4,7 +4,7 @@ Template Name: Housing Page
 */
 ?>
 
-<?php get_header(); 
+<?php get_header();
 
 //Breaking out of site-container
 ?>
@@ -40,7 +40,21 @@ Template Name: Housing Page
 		margin: 50px auto;
 		padding: 0 15px;
 	}
+
+	.housing-map{
+		height: 600px;
+	}
+	.leaflet-popup-content{
+		font-size: 1.5em;
+	}
 </style>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+  crossorigin=""></script>
 
 <div class="static-house">
 	<a onclick="load(0)">
