@@ -1,4 +1,37 @@
 <div class="site-container">
+	<div class="housing-map" id="northside-housing-map"></div>
+	<script type="text/javascript">
+		var mymap = L.map('northside-housing-map').setView([38.644432, -90.313888], 16.5);
+		L.tileLayer('https://api.mapbox.com/styles/v1/studentlifenewspaper/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+			attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+			maxZoom: 20,
+			id: 'ck9nkgte3058o1ip80xvsnybg',
+			tileSize: 512,
+			zoomOffset: -1,
+			accessToken: 'pk.eyJ1Ijoic3R1ZGVudGxpZmVuZXdzcGFwZXIiLCJhIjoiY2s5bmhrZTFzMDJjajNmbzd2eHpoc3BraCJ9.mfW3MvzjG6Rvch9CF1q-Sg'
+		}).addTo(mymap);
+
+		let markers = [
+			["Greenway",								"../northside/greenway", 		38.654472, -90.306115],
+			["Lopata House", 						"../northside/lopata",			38.651244, -90.314620],
+			["Village House",						"../northside/lopata",			38.650595, -90.313906],
+			["Millbrook Apartments",		"../northside/millbrook",		38.650693, -90.312789],
+			["The Lofts", 							"../northside/lofts",				38.655998, -90.301450],
+			["University Drive",	 			"../northside/udrive",			38.650952, -90.308780],
+			["Village East", 						"../northside/veast",				38.650713, -90.311737],
+			["520 Kingsland", 					"../northside/6678wa",			38.654576, -90.309133],
+			["6665 Washington Ave", 		"../northside/6665wa",			38.655239, -90.308178]
+		];
+
+		for(let i = 0; i < markers.length; ++i){
+			var link = document.createElement('a');
+			link.setAttribute("href", markers[i][1]);
+			link.innerText = markers[i][0];
+			marker = new L.marker([markers[i][2], markers[i][3]])
+				.bindPopup(link)
+				.addTo(mymap);
+		}
+	</script>
 	<ul class="staff-list">
 		<li class="person left">
 			<div class="person-container">
@@ -62,30 +95,10 @@
 		</li>
 		<li class="person left">
 			<div class="person-container">
-				<a href="../northside/uterrace">
-					<img class="staff-picture" src="../northside/images/thumbs/uterrace.png?v=2"/>
-					<div class="info-container"><br>
-						<h3 class="name">University Terrace</h3>
-					</div>
-				</a>
-			</div>
-		</li>
-		<li class="person ">
-			<div class="person-container">
 				<a href="../northside/veast">
 					<img class="staff-picture" src="../northside/images/thumbs/veast.png"/>
 					<div class="info-container"><br>
 						<h3 class="name">Village East</h3>
-					</div>
-				</a>
-			</div>
-		</li>
-		<li class="person left">
-			<div class="person-container">
-				<a href="../northside/6640wa">
-					<img class="staff-picture" src="../northside/images/thumbs/6640wa.png"/>
-					<div class="info-container"><br>
-						<h3 class="name">6640-44 Washington Ave</h3>
 					</div>
 				</a>
 			</div>
